@@ -2,13 +2,16 @@
 
 int main()
 {
-  int a = 36;
-
-  for (int i = 0; i < 99; i++)
-     {
-	if (i % a == 0)
-	  {
-	    printf("%d, \n", i);
-	  }
-     } 
+	int random=4;
+	for (int i = 0; i <= 100; i++)
+		{
+			if (i%random==0)
+			{
+				printf("%d is devisible by %d\n",i,random);
+			}
+			else
+			{
+				printf("%d is not devisible bt %d\n",i,random);
+			}
+		}
 }
