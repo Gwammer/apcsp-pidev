@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 
 const double pi = 3.14159265897;
 double areaOfCircle(double r){
