@@ -1,30 +1,21 @@
 #include <stdio.h>
 
-void area_(double radius1, double radius2, double *area1, double *area2);
-
-int main(void)
-
+const double pi = 3.14159265897;
+double areaOfCircle(int r)
 {
-	double radius1, radius2, area1, area2;
-
-	printf("Please enter the radius of the circle:\n");
-	scanf("%lf", &radius1);
-	scanf("%lf", &radius2);
-	area_(radius1, radius2, &area1, &area2);
-	if (area1 == 0) {
-		printf("Not a valid number, the value will return as 1\n");
-		area1 = 3.1400; }
-	if (area2 == 0) {
-		printf("Not a valid number, the value will return as 5\n");
-		area2 = 78.5000; }
-	printf("Area of circle: %0.4f and %0.4f respectively\n", area1, area2);
-	return 0;
+double result = r*r*pi;
+return result;
+	}
+int main(){
+int f;
+int l;
+	printf("Enter the starting point of the range\n");
+	scanf("%d",&f);
+	printf("Enter the ending point of the range\n");
+	scanf("%d",&l);
+for(int i = f; i <= l; i++){
+int r = i;
+double get = areaOfCircle(r);
+printf("The area of a circle with radius %d is %f\n",r, get);
 }
-
-void area_(double radius1, double radius2, double *area1, double *area2)
-
-{
-	double PIE = 3.14;
-	*area1 = PIE * radius1 * radius1;
-	*area2 = PIE * radius2 * radius2;
 }
